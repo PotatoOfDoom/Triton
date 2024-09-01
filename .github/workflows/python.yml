@@ -62,7 +62,7 @@ jobs:
     runs-on: windows-latest
     strategy:
       matrix:
-        python-version: ['3.8', '3.9', '3.10', '3.11']
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
         include:
           - python-version: 3.8
             pycp: cp38-cp38
@@ -76,6 +76,9 @@ jobs:
           - python-version: 3.11
             pycp: cp311-cp311
             pylib: python311.lib
+          - python-version: 3.12
+            pycp: cp312-cp312
+            pylib: python312.lib
     steps:
       - name: Checkout
         uses: actions/checkout@v3
